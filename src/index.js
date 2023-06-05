@@ -4,15 +4,18 @@ import React from 'react';
 import './index.css';
 import App from './App';
 import NotFound from './pages/NotFound';
+
 import reportWebVitals from './reportWebVitals';
+import Movies from "./pages/Movies";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<App />} />
+        <Route path="/" element={<Movies />}>
+          <Route index />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
 );
